@@ -1,0 +1,84 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>780</x><y>130</y><w>130</w><h>240</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+Genre
+--
+ROCK
+TRAP
+JAZZ
+HIP HOP
+POP
+METAL
+CLASSICAL
+--
+- id : Integer
+- type : String
+--
++ toString() : String
++ getType() : String
++ getId() : Integer
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>110</y><w>290</w><h>170</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+Song
+--
+- name : String
+- length : SongLength
+- genre : Genre
+- album : Album
+- featuredArtist : Artist
+--
++ Song(String, SongLength, Genre, Album, Artist)
++ toString() : String
+- hasFeaturedArtist() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>430</x><y>320</y><w>180</w><h>120</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+Album
+--
+- releaseYear : Integer
+- title : String
+- artist : Artist
+--
++ Album(Integer, String, Artist)
++ toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>390</y><w>180</w><h>120</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+Artist
+--
+- name : String
+- age : Integer
+- nationality : String
+--
++ Artist(String, Integer, String)
++ toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>10</y><w>130</w><h>110</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+SongLength
+--
+- minutes : Integer
+- seconds: Integer
+--
++ SongLength(Integer, Integer)
++ toString() : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLInterface</id><coordinates><x>90</x><y>90</y><w>200</w><h>130</h></coordinates><panel_attributes>Play
+--
++ play() : void
++ addToTheQueu(Song) : void
++ deleteFromTheQueue() : void
++ viewList() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>370</y><w>280</w><h>60</h></coordinates><panel_attributes>lt=)-
+m1=require
+</panel_attributes><additional_attributes>20;30;260;20</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>200</y><w>220</w><h>210</h></coordinates><panel_attributes>lt=)-
+m1=require
+</panel_attributes><additional_attributes>20;20;200;190</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>0</y><w>220</w><h>200</h></coordinates><panel_attributes>lt=)-
+m1=require
+</panel_attributes><additional_attributes>20;170;200;10</additional_attributes></element><element><id>Relation</id><coordinates><x>650</x><y>120</y><w>210</w><h>100</h></coordinates><panel_attributes>lt=)-
+m1=require
+</panel_attributes><additional_attributes>20;70;190;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>390</y><w>150</w><h>140</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+BasicList
+--
+- name : String
+- queue : Stack
+--
++ play() : void
++ addToTheQueu(Song) : void
++ deleteFromTheQueue() : void
++ viewList() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>60</x><y>210</y><w>150</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;180;130;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>390</y><w>150</w><h>140</h></coordinates><panel_attributes>&lt;&lt;class&gt;&gt;
+PremiumList
+--
+- name : String
+- queue : LinkedList
+--
++ play() : void
++ addToTheQueu(Song) : void
++ deleteFromTheQueue() : void
++ viewList() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>210</y><w>140</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>120;180;10;10</additional_attributes></element></diagram>
